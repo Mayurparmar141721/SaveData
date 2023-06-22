@@ -1,10 +1,8 @@
-
 {%- if template contains 'index' -%}
       <script>
       window.location.href = '/pages/your-new-homepage-name';
       </script>
 {%- endif -%}
-
 
 NOTE: Using This code we can set any page to as your homepage but thare is one issue with this we can not changes URL Same as home page Using this our URL is like This:
 https://xyz.com/pages/your-new-homepage-name

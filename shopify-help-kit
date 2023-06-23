@@ -17,6 +17,45 @@ NOTE: For Call CSS File
 
 ----------------------------------------------------------------------------------------------------------------------
 
+{% schema %}
+{
+  "name": "Section Name",
+  "class": "Section Class",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "E.G.Banner",
+       "type": "E.G.Banner",
+       "settings": [
+         {
+           "type": "text",
+           "id": "heading",
+           "label": "Main Heading"
+         },{
+           "type": "image_picker",
+           "id": "banner_image",
+           "label": "Banner Main Image"
+         }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Section Name",
+      "settings": {
+        "title": "Section Name"
+      }
+    }
+  ]
+}
+{% endschema %}
+
 NOTE: For Write CSS & JS in liquid file
 
 {% stylesheet %}

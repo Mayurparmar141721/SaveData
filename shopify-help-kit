@@ -1,4 +1,11 @@
-Note: For Write CSS & JS in liquid file
+NOTE: For Call CSS File
+
+{{ 'cus-blog-section.css' | asset_url | stylesheet_tag }}
+
+----------------------------------------------------------------------------------------------------------------------
+
+NOTE: For Write CSS & JS in liquid file
+
 {% stylesheet %}
 {% endstylesheet %}
 

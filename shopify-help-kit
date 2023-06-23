@@ -1,3 +1,12 @@
+Note: For Write CSS & JS in liquid file
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+--------------------------------------------------------------------------------------------------------------------
+
 {%- if template contains 'index' -%}
       <script>
       window.location.href = '/pages/your-new-homepage-name';

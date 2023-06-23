@@ -3,6 +3,11 @@ NOTE: Shopify Settings Type
 1. text  --  For Title, discription & Pera Field
 2. image_picker -- For Image Field
 3. url -- For URL Field
+4. range
+5. select
+6. checkbox
+7. color_scheme
+8. buttons
 
 ----------------------------------------------------------------------------------------------------------------------
 

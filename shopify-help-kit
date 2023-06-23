@@ -1,3 +1,11 @@
+NOTE: Shopify Settings Type
+
+1. text  --  For Title, discription & Pera Field
+2. image_picker -- For Image Field
+3. url -- For URL Field
+
+----------------------------------------------------------------------------------------------------------------------
+
 NOTE: For Call CSS File
 
 {{ 'cus-blog-section.css' | asset_url | stylesheet_tag }}

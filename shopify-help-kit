@@ -102,3 +102,85 @@ NOTE: If Condition
 
 NOTE: Using This code we can set any page to as your homepage but thare is one issue with this we can not changes URL Same as home page Using this our URL is like This:
 https://xyz.com/pages/your-new-homepage-name
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+NOTE: For Refrence
+
+{{ 'cus-about-section.css' | asset_url | stylesheet_tag }}
+
+<div class="feat bg-gray pt-5 pb-5">
+    <div class="container">
+      <div class="section-head col-sm-12">
+          <h4><span>{{ section.settings.about-main-heading }}</span></h4>
+          <p>{{ section.settings.about-main-pera }}</p>
+        </div>
+      <div class="row">     
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'AboutContent' -%}
+          {%- if block.settings.heading != blank -%}
+          <div class="col-lg-4 col-sm-6">
+            <div class="item">
+              <h6>{{ block.settings.about-box-heading }}</h6>
+              <p>{{ block.settings.about-box-pera }}</p>
+            </div>
+          </div>
+          {% endif %}}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+
+{% schema %}
+{
+  "name": "About Section",
+  "class": "about-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "About Section"
+    },{
+       "type": "text",
+       "id": "about-main-heading",
+       "label": "About Main Heading"
+     },{
+       "type": "text",
+       "id": "about-main-pera",
+       "label": "About Main Pera"
+     }    
+  ],
+  "blocks": [
+     {
+       "name": "About Content",
+       "type": "AboutContent",
+       "settings": [
+        {
+           "type": "text",
+           "id": "about-box-heading",
+           "label": "About Box Heading"
+         },{
+           "type": "text",
+           "id": "about-box-pera",
+           "label": "About Box Pera"
+         }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "About Section",
+      "settings": {
+        "title": "About Section"
+      }
+    }
+  ]
+}
+{% endschema %}

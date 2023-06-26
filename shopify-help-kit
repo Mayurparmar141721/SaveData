@@ -1,4 +1,4 @@
-NOTE: Shopify Settings Type
+NOTE: Shopify Basic Settings Type
 
 1. text  --  For Title, discription & Pera Field
 2. image_picker -- For Image Field
@@ -63,6 +63,34 @@ NOTE: For Write CSS & JS in liquid file
 
 {% javascript %}
 {% endjavascript %}
+
+----------------------------------------------------------------------------------------------------------------------
+
+NOTE: For Loop
+
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'AboutContent' -%}
+
+    <div class="main">
+      --------------------- YOUR REPETSBLE CONTENT -------------------
+    </div>
+
+  {%- endcase -%}
+{%- endfor -%}
+
+----------------------------------------------------------------------------------------------------------------------
+
+NOTE: If Condition
+
+{%- if block.settings.heading != blank -%}
+
+  <p class="hero-description">
+    --------------------- YOUR CONTENT ------------------- 
+  </p>
+
+{%- endif -%}
+
 
 ----------------------------------------------------------------------------------------------------------------------
 

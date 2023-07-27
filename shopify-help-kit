@@ -15,6 +15,10 @@ NOTE: For Call CSS File
 
 {{ 'cus-blog-section.css' | asset_url | stylesheet_tag }}
 
+NOTE: For Call Image File
+
+{{ 'image-name.png' | asset_url }}
+
 ----------------------------------------------------------------------------------------------------------------------
 
 {% schema %}
